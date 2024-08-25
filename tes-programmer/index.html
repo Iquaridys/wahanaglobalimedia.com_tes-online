@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tes Programmer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .navbar-nav .nav-link.active {
+      color: #FFD700 !important;
+    }
+
+    .navbar-scrolled {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-restored {
+      transform: translateY(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .sf-shadow {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .border-data {
+      border: 1px solid #ddd;
+    }
+    
+    .sf-min-h-80 {
+      min-height: 80px;
+    }
+
+    .banner {
+      position: fixed;
+      top: 100px;
+      width: 120px;
+      height: 600px;
+      background-color: #ccc;
+      z-index: 9999;
+      display: none;
+    }
+
+    #left-banner {
+      left: 10px;
+    }
+
+    #right-banner {
+      right: 10px;
+    }
+
+    @media (min-width: 1400px) {
+      .banner {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Tes</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Features</a>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="transportasiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Transportasi
+        </a>
+        <div class="dropdown-menu" aria-labelledby="transportasiDropdown">
+          <a class="dropdown-item" href="#">Bus</a>
+          <a class="dropdown-item" href="#">Kereta</a>
+          <a class="dropdown-item" href="#">Pesawat</a>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="akomodasiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Akomodasi
+        </a>
+        <div class="dropdown-menu" aria-labelledby="akomodasiDropdown">
+          <a class="dropdown-item" href="#">Hotel</a>
+          <a class="dropdown-item" href="#">Homestay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>  
+<br><br><br>
+<div id="left-banner" class="banner">
+  <img src="assets/120-600-1.jpg" alt="Left Banner">
+</div>
+<div id="right-banner" class="banner">
+  <img src="assets/120-600-2.jpg" alt="Right Banner">
+</div>
+<div class="container">
+  <div class="p-3">
+    <h1 class="text-center mb-3">7 Tempat Wisata di Surabaya yang Wajib Dikunjungi</h1>
+    <div id="article" class="row" style="margin-right: -2.5%;margin-left: -2.5%;">
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div style="min-height: 150px;padding: 10px;">
+            Sebagai kota terbesar kedua di Indonesia, Surabaya memiliki segudang tempat wisata yang menarik untuk didatangi...
+          </div>
+        </div>
+        <br>
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Taman Prestasi</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Tempat wisata di Surabaya yang satu ini letaknya berada di Jl. Ketabang Kali No.6...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Taman Bungkul</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Penat dengan hiruk pikuk kantor dan perkotaan? Yuk, nikmati rindangnya pepohonan di taman ini...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+        <br>
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Pantai Ria Kenjeran Park</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Posisinya berada di Kota Surabaya bagian timur laut...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Hutan Bambu dan Taman Harmoni Keputih</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Tidak perlu jauh-jauh ke Asia Timur untuk berfoto dengan latar belakang bambu...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+        <br>
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Ekowisata Mangrove</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Tahukah Anda apa itu mangrove? Mangrove adalah hutan bakau...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Kebun Bibit Wonorejo</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Lahan yang berada di pusat kota bagian tenggara ini sering juga disebut sebagai Kebun Bibit 2...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+        <br>
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Kebun Binatang Surabaya</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Masih membahas tempat wisata di Surabaya bertema alam...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>House of Sampoerna</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>House of Sampoerna adalah museum yang menawarkan pengalaman bersejarah...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+        <br>
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Monumen Kapal Selam</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Monumen ini merupakan salah satu landmark bersejarah di Surabaya...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Museum 10 November</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Museum ini mengabadikan perjuangan rakyat Surabaya dalam mempertahankan kemerdekaan...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+        <br>
+        <div class="sf-shadow border border-data" style="max-width: 420px;margin:0 auto;">
+          <div class="sf-min-h-80 p-2">
+            <h2>Patung Suro dan Boyo</h2>
+          </div>
+          <hr style="margin-bottom: 0px;margin-top: 0px;border-top: 1px solid #aaa;">
+          <div style="min-height: 150px; padding: 5px;">
+            <p>Patung ini menjadi ikon Kota Surabaya yang melambangkan keberanian...</p>
+            <strong>Read More...</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="loadMoreModal" tabindex="-1" role="dialog" aria-labelledby="loadMoreModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loadMoreModalLabel">Load More Content</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Would you like to load more content?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="loadMoreBtn">Ya</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  let loadCount = 0;
+  const maxLoads = 4;
+
+  $('.nav-link').on('click', function() {
+    $('.nav-link').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  let lastScrollTop = 0;
+  $(window).scroll(function() {
+    let currentScrollTop = $(this).scrollTop();
+    if (currentScrollTop > lastScrollTop) {
+      $('nav').removeClass('navbar-restored').addClass('navbar-scrolled');
+    } else {
+      $('nav').removeClass('navbar-scrolled').addClass('navbar-restored');
+    }
+    lastScrollTop = currentScrollTop;
+
+    const scrollTriggerPosition = $(document).height() - $(window).height() - 10;
+
+    if ($(window).scrollTop() >= scrollTriggerPosition) {
+        if (loadCount < maxLoads) {
+            $('#loadMoreModal').modal('show');
+        }
+    }
+  });
+
+  $('#loadMoreBtn').on('click', function() {
+    loadCount++;
+    let newContent = $('#article').html(); 
+    $('#article').append(newContent);
+    $('#loadMoreModal').modal('hide');
+  });
+
+  $(window).on('resize scroll', function() {
+    const windowWidth = $(window).width();
+    if (windowWidth > 1400) {
+      $('#left-banner, #right-banner').css('display', 'block');
+    } else {
+      $('#left-banner, #right-banner').css('display', 'none');
+    }
+  });
+</script>
+</body>
+</html>
